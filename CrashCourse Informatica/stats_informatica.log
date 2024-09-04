@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.4)  4 SEP 2024 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.4)  4 SEP 2024 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,22 +1585,15 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
 <dewey-defeats-truman.jpeg, id=83, 602.25pt x 481.8pt>
 File: dewey-defeats-truman.jpeg Graphic file (type jpg)
 <use dewey-defeats-truman.jpeg>
-Package pdftex.def Info: dewey-defeats-truman.jpeg  used on input line 281.
-(pdftex.def)             Requested size: 301.12425pt x 240.8994pt.
-
-Overfull \vbox (53.95787pt too high) detected at line 281
- []
-
-[12
+Package pdftex.def Info: dewey-defeats-truman.jpeg  used on input line 282.
+(pdftex.def)             Requested size: 180.67639pt x 144.5411pt.
+ [12
 
  <./dewey-defeats-truman.jpeg>]
 File: dewey-defeats-truman.jpeg Graphic file (type jpg)
 <use dewey-defeats-truman.jpeg>
-Package pdftex.def Info: dewey-defeats-truman.jpeg  used on input line 281.
-(pdftex.def)             Requested size: 301.12425pt x 240.8994pt.
-
-Overfull \vbox (53.95787pt too high) detected at line 281
- []
+Package pdftex.def Info: dewey-defeats-truman.jpeg  used on input line 282.
+(pdftex.def)             Requested size: 180.67639pt x 144.5411pt.
 
 [13
 
@@ -1608,15 +1601,14 @@ Overfull \vbox (53.95787pt too high) detected at line 281
 <selection_bias_xkcd.png, id=96, 251.13824pt x 247.07306pt>
 File: selection_bias_xkcd.png Graphic file (type png)
 <use selection_bias_xkcd.png>
-Package pdftex.def Info: selection_bias_xkcd.png  used on input line 287.
-(pdftex.def)             Requested size: 261.32309pt x 257.10448pt.
+Package pdftex.def Info: selection_bias_xkcd.png  used on input line 290.
+(pdftex.def)             Requested size: 195.98898pt x 192.82553pt.
+ [14
 
-Overfull \vbox (41.96294pt too high) detected at line 287
- []
-
-[14
-
- <./selection_bias_xkcd.png (PNG copy)>] [15
+ <./selection_bias_xkcd.png (PNG copy)>]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 317.
+ [15
 
 ] [16
 
@@ -1626,10 +1618,10 @@ Overfull \vbox (41.96294pt too high) detected at line 287
 
 ] [19
 
-] [20
-
 ]
-[21
+[20
+
+] [21
 
 ] [22
 
@@ -1643,15 +1635,15 @@ Overfull \vbox (41.96294pt too high) detected at line 287
 <BigPicture.png, id=159, 963.6pt x 542.025pt>
 File: BigPicture.png Graphic file (type png)
 <use BigPicture.png>
-Package pdftex.def Info: BigPicture.png  used on input line 393.
+Package pdftex.def Info: BigPicture.png  used on input line 397.
 (pdftex.def)             Requested size: 522.63953pt x 293.98763pt.
 
-Overfull \hbox (87.10547pt too wide) in paragraph at lines 393--393
+Overfull \hbox (87.10547pt too wide) in paragraph at lines 397--397
 [][]  
  []
 
 
-Overfull \vbox (21.0642pt too high) detected at line 393
+Overfull \vbox (21.0642pt too high) detected at line 397
  []
 
 [26
@@ -1668,18 +1660,16 @@ Overfull \vbox (21.0642pt too high) detected at line 393
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 460.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 464.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 460.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 460.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 464.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 460.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 464.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 460.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 464.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7.4> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 460.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 464.
 
  [32
 
@@ -1718,15 +1708,15 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7.4> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 650.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 654.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 650.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 654.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 650.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 654.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 650.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 654.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <7.4> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 650.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 654.
  [49
 
 ] [50
@@ -1781,7 +1771,7 @@ aulj.corcuera/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso9.pfb><C
 :/Users/paulj.corcuera/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usy
 r.pfb><C:/Users/paulj.corcuera/AppData/Local/Programs/MiKTeX/fonts/type1/urw/sy
 mbol/usyr.pfb>
-Output written on stats_informatica.pdf (53 pages, 1564631 bytes).
+Output written on stats_informatica.pdf (53 pages, 1567143 bytes).
 PDF statistics:
  394 PDF objects out of 1000 (max. 8388607)
  107 named destinations out of 1000 (max. 500000)
