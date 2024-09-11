@@ -2223,7 +2223,7 @@ Tomando promedios, $\bar{Y} = \alpha + \bar{X} \beta + \bar{\epsilon}$. \pause E
 \end{center}
 \end{frame}
 
-\begin{frame}{La clase pasada\dots}
+\begin{frame}{Regresión Lineal Múltiple}
 La clase pasada vimos como podemos aproximar la función de esperanza condicional (en variables que observamos $X_i$) en una forma lineal 
 \begin{align*}
 E[Y_i \mid X_i =x ] \approx \alpha + x \beta ,
@@ -2235,11 +2235,21 @@ cuando $X_i$ es un escalar (es decir, $X_i\in \mathbb{R}$ en lugar de ser un vec
 				\end{itemize}
 
 \vspace{.5cm}
-Esto se puede generalizar al caso donde observas varias características $X_{i1}, X_{i2}, \dots, X_{ik}$. Simplemente podemos escribirlo en forma de vectores. 
+Esto se puede generalizar al caso donde observas varias características $X_{i2}, X_{i3}, \dots, X_{id}$. Simplemente podemos escribirlo en forma de vectores. 
 \begin{align*}
-E[Y_i| \mathbf{X}_i =\mathbf{x} ] \approx \mathbf{x}' \bm{\beta} \text{ dado un vector } \mathbf{X_i} = (1,X_{i1},...,X_{iK})'
+E[Y_i| \mathbf{X}_i =\mathbf{x} ] \approx \mathbf{x}' \bm{\beta} \text{ dado un vector } \mathbf{X_i} = (1,X_{i2},...,X_{id})'
 \end{align*}
 
+\end{frame}
+
+\begin{frame}{Visualmente}
+Por convención*, definimos la primera columna como el intercepto: vector que toma el valor de 1 en todos sus elementos.
+\begin{center}
+\includegraphics[scale=0.5]{xmat.png}
+\end{center}
+
+\vspace{0.8cm}
+*: el intercepto hace que el error de predicción en la muestra sea 0 en promedio. Esta es una propiedad bastante deseable
 \end{frame}
 
 	
@@ -2248,11 +2258,314 @@ E[Y_i| \mathbf{X}_i =\mathbf{x} ] \approx \mathbf{x}' \bm{\beta} \text{ dado un 
 	1. Introducción a Machine Learning
 	\vspace{0.8cm}
 	
-	2. Comandos de Stata para ML
+	2. Comandos de Stata para Regresión Lineal con ML: \textit{lasso}, \textit{elasticnet}
 	
 	\end{frame}
 	
 	
+\begin{frame}{¿Qué es Machine Learning (ML)?}
+
+\begin{itemize}
+\item Le llamamos así al uso de computadoras para \textbf{detectar patrones en la data y usarlos para hacer predicciones} o decisiones
+\vspace{0.8cm}
+\item Suele ser útil cuando: 
+\begin{itemize}
+\item Automatizar algo que un humano no puede hacer 
+\vspace{0.5cm}
+\item Procesar una cantidad de información que un humano no puede hacerlo de manera rápida (ej. Terabytes de data)
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Aplicaciones}
+¡¡Está en todos lados!!
+\begin{itemize}
+\item Filtra correo spam
+\item Recomendación de videos en Youtube
+\item Google Translate
+\item Analizar bases de datos ("automatizar" a un estadista)
+\item Videojuegos
+\item ChatBots? (ej. ChatGPT, Brok)
+\end{itemize}
+\vspace{0.8cm}
+
+Combinar matemática/estadísticas con MUCHA data o poder computacional abre un abanico de herramientas útiles.
+\end{frame}
+	
+\begin{frame}{Conocer las limitaciones}
+Como toda herramienta, deben conocer sus \textbf{limitaciones} a la hora de usarla. 
+\vspace{0.8cm}
+
+Muchas personas que usan estas herramientas indiscriminadamente están cayendo en una de las trampas más grandes de la estadística: \textbf{overfitting}
+\begin{itemize}
+\item Método no funciona bien fuera de la muestra estadística en la que se analizó originalmente (\textit{out-of-sample prediction})
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=.8]{failure_ml.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Todo es un tema de marketing\dots}
+\begin{center}
+\includegraphics[scale=0.5]{jargon_ml.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Supervised, Unsupervised and Artificial Intelligence}
+\begin{center}
+\includegraphics[scale=0.5]{ai_ml.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Supervised Learning}
+Supervised Learning es el caso que más nos sirve como economistas, pues discute cómo realizar predicciones buenas cuando observamos características $X$ y resultados $y$.
+
+\begin{itemize}
+\item Cuando $y$ es categórico (ejemplo, toma valores 0 o 1), se le llama \textbf{Clasificación}
+\vspace{0.4cm}
+
+\item Cuando $y$ es continuo (ejemplo, salarios), se le llama \textbf{Regresión}
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=0.5]{supervised_ml.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Train vs Test Data}
+\begin{center}
+\includegraphics[scale=0.5]{train_test.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Train vs Test Data}
+Usamos una parte de la data para entrenar (\textit{train})
+\begin{center}
+\includegraphics[scale=0.5]{train_data.png}
+\end{center}
+\vspace{0.5cm}
+
+Usamos otra parte de la data para validar (\textit{test})
+\begin{center}
+\includegraphics[scale=0.5]{test_data.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Unsupervised Learning}
+Unsupervised learning es el caso donde observamos características $X$ pero no los resultados $y$, y buscamos obtener algún patrón.
+
+\begin{center}
+\includegraphics[scale=0.5]{unsupervised.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Unsupervised Learning}
+Unsupervised learning es el caso donde observamos características $X$ pero no los resultados $y$, y buscamos obtener algún patrón.
+
+\begin{center}
+\includegraphics[scale=0.5]{unsupervised2.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Regresión}
+Hoy nos centaremos el regresión lineal. La manera en que suelen definir el problema es así
+\begin{align*}
+\hat{y}_i &= x_i'w ,
+\end{align*}
+donde $w$ es el peso (weight), que corresponde a lo que nosotros conocemos como el coeficiente de regresión $\beta$.
+\vspace{0.8cm}
+
+Que recordemos que busca minimizar 
+\begin{align*}
+\sum_{i=1}^n (\hat{y}_i - y_i )^2 &= \sum_{i=1}^n (w' x_i - y_i )^2 
+\end{align*}
+
+\end{frame}
+
+
+\begin{frame}{Trade-off Fundamental}
+\begin{center}
+\includegraphics[scale=0.4]{mse_traintest.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Trade-off Fundamental}
+Algunos llaman $MSE_{tr}$ el \textbf{error de train} y a $MSE_{te}$ el \textbf{error de test}.
+
+\begin{center}
+\includegraphics[scale=0.5]{fundamental_tradeoff.png}
+\end{center}
+
+Predecir mal fuera de muestra ($E_{test}$ alto) puede ser a causa de 
+\begin{itemize}
+\item $E_{gap}$ alto: tu modelo no generaliza bien fuera de la muestra train 
+\item  $E_{train}$ alto: tu modelo no es bueno prediciendo ni siquiera dentro de la muestra train 
+\end{itemize}
+\vspace{0.8cm}0
+¿De qué depende el error de generalización?
+\begin{itemize}
+\item Se reduce cuando la muestra $n$ aumenta 
+\item Aumenta cuando la complejidad del modelo aumenta (por ej. número de características $X$ a considerar)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Trade-off Fundamental}
+Algunos llaman $MSE_{tr}$ el \textbf{error de train} y a $MSE_{te}$ el \textbf{error de test}.
+
+\begin{center}
+\includegraphics[scale=0.5]{fundamental_tradeoff.png}
+\end{center}
+
+Predecir mal fuera de muestra ($E_{test}$ alto) puede ser a causa de 
+\begin{itemize}
+\item $E_{gap}$ alto: tu modelo no generaliza bien fuera de la muestra train 
+\item  $E_{train}$ alto: tu modelo no es bueno prediciendo ni siquiera dentro de la muestra train 
+\end{itemize}
+\vspace{0.8cm}
+¿De qué depende el error de generalización?
+\begin{itemize}
+\item Se reduce cuando la muestra $n$ aumenta  \textcolor{red}{$\rightarrow$ no controlable}
+\item Aumenta cuando la complejidad del modelo aumenta (por ej. número de características $X$ a considerar)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Trade-off Fundamental}
+El caso cuando $E_{train}$ es alto, se le llama \textbf{overfitting}
+
+\begin{center}
+\includegraphics[scale=0.3]{overfit.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Regularización}
+Una manera de controlar la complejidad del modelo es tratar de hacer que hayan menos $X$ (o cercano a ello). 
+\vspace{0.8cm}
+A esto se le conoce como \textbf{regularización}. La manera en que se aplica en el contexto de la regresión lineal es agregando un término de penalización (a lo multiplicador de Lagrange) para cuando los coeficientes $w$ son muy altos. 
+\vspace{0.8cm}
+
+Es decir, la estimación/algoritmo priorizará tener un modelo menos complejo.
+\vspace{.8cm}
+
+Denotamos $1/n \sum_{i=1}^n w_i^2 := \lVert w \rVert_2$ a la norma $L_2$ y  $1/n  \sum_{i=1}^n \lvert w_i \rvert := \lVert w \rVert_1$ a la norma $L_1$.
+
+\end{frame}
+
+
+\begin{frame}{Ridge Regression}
+La regresión Ridge pone el siguiente término de penalización
+\begin{center}
+\includegraphics[scale=0.5]{l2_regularization.png}
+\end{center}
+donde $\lambda$ es el parámetro de penalización elegido por el econometrista. 
+
+Gráficamente se ve así
+\begin{center}
+\includegraphics[scale=0.4]{ridge_minimization.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Ridge Regression}
+Pros
+\begin{itemize}
+\item Tiene una solución única incluso cuando OLS no lo tiene
+\item Robusto a valores extremos en la data
+\end{itemize}
+\vspace{0.8cm}
+Cons 
+\begin{itemize}
+\item Retiene todos los coeficientes potencialmente
+\item Introducimos sesgo (hacia 0) a los coeficientes
+\item Hay que elegir $\lambda$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Lasso Regression}
+La regresión Lasso pone el siguiente término de penalización
+\begin{center}
+\includegraphics[scale=0.5]{l1_regularization.png}
+\end{center}
+donde $\lambda$ es el parámetro de penalización elegido por el econometrista. 
+
+Gráficamente se ve así
+\begin{center}
+\includegraphics[scale=0.5]{lasso_minimization.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Lasso Regression}
+Pros
+\begin{itemize}
+\item Reduce mucho más la complejidad del modelo al hacer coeficientes exactamente cero
+\item Computacionalmente rápido
+\end{itemize}
+\vspace{0.8cm}
+Cons 
+\begin{itemize}
+\item No es muy robusto cuando hay fuerte correlacion entre distintos $X$
+\item Introducimos sesgo (hacia 0) a los coeficientes
+\item Hay que elegir $\lambda$
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Elastic Net Regression}
+¡Podemos combinar el beneficio de ambos!
+\begin{center}
+\includegraphics[scale=0.3]{Elastic_1.png}
+\end{center}
+donde $\lambda$ es el parámetro de penalización elegido por el econometrista y $\alpha \in [0,1]$ es la importancia relativa que le damos a Lasso con respecto a Ridge.
+\vspace{0.8cm}
+
+¡¡Ahora tenemos otro hiperparámetro más!!
+\begin{center}
+\includegraphics[scale=0.2]{doge_headache.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}{¿Cómo elegir hiperparámetros?}
+Una propuesta de pasos
+\begin{enumerate}
+\item Partir la data en distintas partes (por ahora pensemos solo en 2), y una se usa para training y otra para test 
+\item Repetimos el paso 1 con distintos valores de $\lambda$ que elegimos (ej. probemos $\lambda=0, \lambda=1, \lambda=2$)
+\item Nos quedamos con el $\lambda$ que tuvo el menor error de predicción fuera de la muestra
+\end{enumerate}
+\vspace{0.8cm}
+
+A este procedimiento se le conoce como \textbf{Cross-Validation}. 
+\end{frame}
+
+\begin{frame}
+\begin{center}
+{\Huge \textbf{¡A la computadora!}}
+\end{center}
+\end{frame}
+
+
 \end{document}
 
 
