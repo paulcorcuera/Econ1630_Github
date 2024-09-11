@@ -188,8 +188,14 @@
 \headcommand {\beamer@framepages {300}{300}}
 \headcommand {\slideentry {0}{0}{95}{301/301}{}{0}}
 \headcommand {\beamer@framepages {301}{301}}
-\headcommand {\beamer@partpages {1}{301}}
-\headcommand {\beamer@subsectionpages {1}{301}}
-\headcommand {\beamer@sectionpages {1}{301}}
-\headcommand {\beamer@documentpages {301}}
-\headcommand {\gdef \inserttotalframenumber {94}}
+\headcommand {\slideentry {0}{0}{96}{302/302}{}{0}}
+\headcommand {\beamer@framepages {302}{302}}
+\headcommand {\slideentry {0}{0}{97}{303/303}{}{0}}
+\headcommand {\beamer@framepages {303}{303}}
+\headcommand {\slideentry {0}{0}{98}{304/304}{}{0}}
+\headcommand {\beamer@framepages {304}{304}}
+\headcommand {\beamer@partpages {1}{304}}
+\headcommand {\beamer@subsectionpages {1}{304}}
+\headcommand {\beamer@sectionpages {1}{304}}
+\headcommand {\beamer@documentpages {304}}
+\headcommand {\gdef \inserttotalframenumber {97}}
